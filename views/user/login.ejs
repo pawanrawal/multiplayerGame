@@ -1,0 +1,24 @@
+<% if (req.flash('error').length > 0){ %>
+	<h1 class="text-center"><%- req.flash('error') %></h1>
+<% } %>
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<form class="form-vertical well" id = "sign-in-form" method="post" action="/login">
+		  <legend>Login!</legend>
+		  <div class="form-group">
+		    <label for="name" class="control-label">Enter Screen name</label>
+		    <input type="name" class="form-control" placeholder="Richi Rich" name="name" id="screenName" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="password" class="control-label">Password</label>
+		    <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+		  </div>
+		  <div class="form-group">
+		  	<div class="text-center">
+		    	<button type="submit"  class="btn btn-default">Sign In</button>
+		  	</div>
+		  </div>
+		  <a href="/signup">New User? Sign Up!</a>
+		</form>
+	</div>
+</div>
