@@ -37,6 +37,7 @@ module.exports.routes = {
   },
 
   'get /home': 'UserController.home',
+
   'get /signup': {
     view: 'user/signup'
   },
@@ -45,13 +46,19 @@ module.exports.routes = {
     view: 'user/login'
   },
 
+  'get /game' : 'GameController.find',
+
+  'post /game': 'GameController.create',
+
   'post /login': 'UserController.login',
 
   'post /signup': 'UserController.signup',
 
   'get /logout': 'UserController.logout',
 
-  'post /game/create': 'GameController.create'
+  // 'post /game/create': 'GameController.create'
+
+  'post /game/:gameId/users': 'GameController.join',
 
   /***************************************************************************
   *                                                                          *

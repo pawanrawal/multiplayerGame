@@ -25,7 +25,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "PORT=9999 NODE_ENV=test mocha -R spec -b --recursive"
   },
   "main": "app.js",
   "repository": {
@@ -33,5 +34,9 @@
     "url": "git://github.com/pawanrawal/multiplayerGame.git"
   },
   "author": "pawanrawal",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "barrels": "^1.5.0",
+    "should": "^7.0.1"
+  }
 }

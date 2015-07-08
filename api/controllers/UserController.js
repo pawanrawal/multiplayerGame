@@ -17,7 +17,8 @@ module.exports = {
       password: req.param('password')
     },function(err,user){
         if (err) {
-          console.log(err);
+          sails.log.error(err);
+          // Implement flash at front end;
           req.flash('error',err);
           return res.redirect('/login');
         }
