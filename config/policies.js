@@ -51,5 +51,12 @@ module.exports.policies = {
 
   UserController: {
     home: 'sessionAuth'
+  },
+  GameController: {
+    '*': 'sessionAuth'
+  },
+  AnagramsController: {
+    '*': 'sessionAuth'
   }
+
 };

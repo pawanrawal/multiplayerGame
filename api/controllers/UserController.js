@@ -60,6 +60,9 @@ module.exports = {
   },
 
   home: function(req,res){
+    User.find({id: req.session.user_id}).exec(function(err,user){
+      if (err) return res.negotiate(err);
+    })
     res.view('home');
   }
 };

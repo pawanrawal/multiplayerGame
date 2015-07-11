@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Sails App</title>
+    <title>Anagram App</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,11 +36,20 @@
   </head>
 
   <body>
+    <div class="row">
+      <br>
+      <% if (req.session.authenticated) {%>
+        <div class="col-md-offset-9 col-md-3"><a href="/logout" class="btn btn-danger">Logout!</a></div>
+      <% } %>
+    </div>
     <div class="text-center">
       <br>
-      <img src ="/images/quiz.jpg" >
+      <img src ="/images/anagram.jpg" width="15%"><br>
+      <p style="font-size:16px"><i>Anagram is a meaningful word, phrase, or name formed by rearranging the letters of another</i><br><br>
+      <b>Each game consists of ten questions with four options each. Out of the four options three are anagrams , one is not. You have to find the odd one out.</b><br><br>
+      Right answer is awarded with three points, for a wrong answer one point is deducted </p>
+
     </div>
-    </br></br></br>
     <%- body %>
 
     <!--
@@ -97,6 +106,7 @@
     <script src="/js/dependencies/jquery.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/bootstrap.js"></script>
+    <script src="/js/game.js"></script>
     <script src="/js/home.js"></script>
     <!--SCRIPTS END-->
   </body>
