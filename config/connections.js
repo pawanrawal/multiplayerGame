@@ -23,50 +23,6 @@ module.exports.connections = {
 
   /***************************************************************************
   *                                                                          *
-  * Local disk storage for DEVELOPMENT ONLY                                  *
-  *                                                                          *
-  * Installed by default.                                                    *
-  *                                                                          *
-  ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
-
-  /***************************************************************************
-  *                                                                          *
-  * MySQL is the world's most popular relational database.                   *
-  * http://en.wikipedia.org/wiki/MySQL                                       *
-  *                                                                          *
-  * Run: npm install sails-mysql                                             *
-  *                                                                          *
-  ***************************************************************************/
-  someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
-  },
-
-  /***************************************************************************
-  *                                                                          *
-  * MongoDB is the leading NoSQL database.                                   *
-  * http://en.wikipedia.org/wiki/MongoDB                                     *
-  *                                                                          *
-  * Run: npm install sails-mongo                                             *
-  *                                                                          *
-  ***************************************************************************/
-  someMongodbServer: {
-    adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
-  },
-
-  /***************************************************************************
-  *                                                                          *
   * PostgreSQL is another officially supported relational database.          *
   * http://en.wikipedia.org/wiki/PostgreSQL                                  *
   *                                                                          *
@@ -74,13 +30,23 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
+  PostgresqlServer: {
     adapter: 'sails-postgresql',
     host: 'localhost',
     user: '',
     password: '',
     database: 'pawanrawal',
     port: 5432
+  },
+//postgres://llufzptuywhsao:gD4JEWol_Hh63CU02LI5kp2lzG@ec2-54-225-134-223.compute-1.amazonaws.com:5432/d5hds2dc8rurha'
+  ProductionPostgresqlServer: {
+    adapter: 'sails-postgresql',
+    host: 'ec2-54-225-134-223.compute-1.amazonaws.com',
+    user: 'llufzptuywhsao',
+    password: 'gD4JEWol_Hh63CU02LI5kp2lzG',
+    database: 'd5hds2dc8rurha',
+    port: 5432,
+    ssl: true
   },
 
 
