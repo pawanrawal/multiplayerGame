@@ -8,6 +8,7 @@
     "bcrypt": "~0.8.3",
     "connect-redis": "1.4.5",
     "ejs": "~0.8.4",
+    "forever": "^0.14.2",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
